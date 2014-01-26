@@ -4,7 +4,7 @@ Hozzunk létre egy fantasy világot, ahol hősök vívhatnak egymással!
 
 ## 1. elvárás
 Hőseink a következőkkel rendelkeznek:
-- Élet (HP): max. 30
+- Élet (**HP**): max. 30
 - Támadás képesség: mikor használja, ellenfelét 1 HP-val sebzi
 - A halál egyelőre nem definiált, az elesett hős ilyenkor elszállhat egy exception-nel :)
 
