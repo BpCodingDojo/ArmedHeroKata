@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+    <title>ArmedHeroKata tests</title>
+    <link href='http://fonts.googleapis.com/css?family=Lora|Istok+Web:700' rel='stylesheet' type='text/css'/>
+    <link rel="stylesheet" href="jasmine.css"/>
+    <script src="jasmine.js"></script>
+    <script src="jasmine-html.js"></script>
+    <script src="underscore.js"></script>
+
+    <script src="src/hero.js"></script>
+    <script src="test/herospec.js"></script>
+
+    <script type="text/javascript">
+
+        (function() {
+            var jasmineEnv = jasmine.getEnv();
+            jasmineEnv.updateInterval = 250;
+
+            /**
+             Create the `HTMLReporter`, which Jasmine calls to provide results of each spec and each suite. The Reporter is responsible for presenting results to the user.
+             */
+            var htmlReporter = new jasmine.HtmlReporter();
+            jasmineEnv.addReporter(htmlReporter);
+
+            /**
+             Delegate filtering of specs to the reporter. Allows for clicking on single suites or specs in the results to only run a subset of the suite.
+             */
+            jasmineEnv.specFilter = function(spec) {
+                return htmlReporter.specFilter(spec);
+            };
+
+            /**
+             Run all of the tests when the page finishes loading - and make sure to run any previous `onload` handler
+
+             ### Test Results
+
+             Scroll down to see the results of all of these specs.
+             */
+            var currentWindowOnload = window.onload;
+            window.onload = function() {
+                if (currentWindowOnload) {
+                    currentWindowOnload();
+                }
+
+                execJasmine();
+            };
+
+            function execJasmine() {
+                jasmineEnv.execute();
+            }
+        })();
+    </script>
+</head>
+<body>
+
+</body>
+</html>
