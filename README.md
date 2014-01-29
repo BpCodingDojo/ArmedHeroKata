@@ -1,9 +1,9 @@
 # ArmedHeroKata
 
-Hozzunk létre egy fantasy világot, ahol hősök vívhatnak egymással!
+Hozzunk létre egy fantasy világot, ahol hősök küzdhetnek meg egymással!
 
 ## 1. elvárás
-Hőseink a következő tulajdonságokkal rendelkeznek:
+Lehetnek hőseink, akik a következő tulajdonságokkal rendelkeznek:
 - *HP (életerő):* hősönként változhat, de *max. 30*
 - Támadás képesség: mikor használja, ellenfelét 1 HP-val sebzi
 - A halál egyelőre nem definiált, az elesett hős ilyenkor elszállhat egy exception-nel :)
@@ -11,17 +11,15 @@ Hőseink a következő tulajdonságokkal rendelkeznek:
 ## 2. elvárás
 Hőseink fegyvereket szerezhetnek:
 - A fegyver növeli a támadási képesség sebzését
-- *Fegyverek:* *Kard (sebzés 7)*, *Tőr (sebzés 5)*, *Varázsbot (sebzés 8)*
+- *Fegyverek:* *Kard (damage 7)*, *Tőr (damage 5)*, *Varázsbot (damage 8)*
 
 ## 3. elvárás
-A fegyverekkel védekeznek is egyszerre:
-- A fegyver védőértékét le kell vonni a viselőjére mért sebzésből
-- *Védőértékek*: *Kard (2)*, *Tőr (4)*, *Varázsbot (1)*
+A harcos mellett a csatában részt vehetnek *Papok*. A különleges képességük a gyógyítás, ekkor 3 HP-t növelhetnek bárkin, akár magukon is. A papok meglehetősen pacifisták, így ők nem támadhatnak vagy fegyverkezhetnek - de ez sajnos a harcosokat nem érdekli, így ők előszeretettel ütlegelik a nekik nem tetsző atyákat!
 
 ## 4. elvárás
-A *fegyverek sebzése függ az ellenfél fegyverétől*:
-- A kard a tőr ellen 8-at sebez
-- A varázsbot a kard és a tőr ellen 9-et sebez
+A harcosok fegyvereikkel védekeznek is:
+- Támadás esetén a fegyver védőértékét le kell vonni a viselőjére mért sebzésből
+- *Védőértékek*: *Kard (defense 2)*, *Tőr (defense 4)*, *Varázsbot (defense 1)*
 
 ## 5. elvárás
 A hősök megszerezhetik a rettegett fegyvert, a *Vámpírtőr*-t:
